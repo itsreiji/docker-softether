@@ -18,13 +18,13 @@ docker build . --tag softether
 For a simple use
 
 ```
-docker run -d --restart=always --cap-add NET_ADMIN --device=/dev/net/tun --net=host -p443:443 -p992:992 -p5555:5555 -p1194:1194 -p1194:1194/udp -p500:500/udp -p4500:4500/udp -p1701:1701/udp --name softether kyokuheki/softether
+docker run -d --restart=always --cap-add NET_ADMIN --device=/dev/net/tun --net=host -p443:443 -p992:992 -p5555:5555 -p1194:1194 -p1194:1194/udp -p500:500/udp -p4500:4500/udp -p1701:1701/udp --name softether itsreiji/softether
 ```
 
 For a simple use with volumes
 
 ```
-docker run -d --restart=always --cap-add NET_ADMIN --device=/dev/net/tun --net=host -p443:443 -p992:992 -p5555:5555 -p1194:1194 -p1194:1194/udp -p500:500/udp -p4500:4500/udp -p1701:1701/udp --name softether -v/docker/softether/etc:/etc/vpnserver -v/docker/softether/log:/var/log/vpnserver kyokuheki/softether
+docker run -d --restart=always --cap-add NET_ADMIN --device=/dev/net/tun --net=host -p443:443 -p992:992 -p5555:5555 -p1194:1194 -p1194:1194/udp -p500:500/udp -p4500:4500/udp -p1701:1701/udp --name softether -v/docker/softether/etc:/etc/vpnserver -v/docker/softether/log:/var/log/vpnserver itsreiji/softether
 ```
 
 Configure softether
