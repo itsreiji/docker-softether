@@ -1,7 +1,7 @@
 FROM alpine:latest as builder
 LABEL maintainer Kenzo Okuda <kyokuheki@gmail.comt>
 ENV LANG="en_US.UTF-8" \
-    SOFTETHER_VERSION="v4.27-9666-beta"
+    SOFTETHER_VERSION="v4.29-9680-rtm"
 
 RUN set -eux -o pipefail \
  && apk add --no-cache --virtual .build-deps \
@@ -26,7 +26,7 @@ RUN set -eux -o pipefail \
 FROM alpine:latest
 LABEL maintainer Kenzo Okuda <kyokuheki@gmail.com>
 ENV LANG="en_US.UTF-8" \
-    SOFTETHER_VERSION="v4.27-9666-beta"
+    SOFTETHER_VERSION="v4.29-9680-rtm"
 
 COPY --from=builder /usr/vpnserver /usr/vpnbridge /usr/vpncmd /usr/vpnserver/
 COPY assets/entrypoint.sh /
